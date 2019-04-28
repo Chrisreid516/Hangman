@@ -114,15 +114,32 @@ namespace Hangman
                 if (!Enum.TryParse(categoryAsString, out category))
                 {
                     Console.WriteLine("please enter a valid category");
+                    DisplayContinuePrompt();
                 }
 
                 // This is so the default Enum selection isn't accidentally selected
                 else if (category == Category.INVALID)
                 {
                     Console.WriteLine("please enter a valid category");
+                    DisplayContinuePrompt();
                 }
 
-                else
+                else if (category == Category.GAMES)
+                {
+                    validResponse = true;
+                }
+
+                else if (category == Category.MOVIES)
+                {
+                    validResponse = true;
+                }
+
+                else if (category == Category.BOOKS)
+                {
+                    validResponse = true;
+                }
+
+                else if (category == Category.E)
                 {
                     validResponse = true;
                 }
